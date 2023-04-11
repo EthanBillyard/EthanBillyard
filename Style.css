@@ -1,0 +1,523 @@
+body{
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100vw;
+}
+
+/*HEADER - ALL PAGES*/
+header {
+  width: 99.5vw;
+  display: grid;
+  grid-template-columns: 2;
+  background-color: rgb(222, 222, 222);
+  border: 3px solid rgb(169, 169, 169);
+  border-radius: 0px 0px 5px 5px;
+}
+
+.logo {
+  grid-column: 1;
+  padding: 0.75rem;
+  vertical-align: middle;
+}
+
+h1 {
+  grid-column: 2;
+  color:rgb(20, 20, 20);
+}
+
+/*TOPNAV - ALL PAGES*/
+nav:not(.lil-nav){
+  width: 99.5vw; 
+  position: sticky; 
+  top: 0;
+  background: rgb(222, 222, 222);
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  border: 2px solid rgb(169, 169, 169);
+  border-radius: 5px;
+  padding: 3px;
+  text-align: center;
+  font-size: 2vw;
+}
+
+nav:not(.lil-nav) a {
+  padding: 5px;
+  color: rgb(20, 20, 20);
+  text-decoration: none;
+}
+
+nav:not(.lil-nav) a.active {
+  background-color: rgb(169, 169, 169);
+}
+
+nav:not(.lil-nav) a:hover {
+  background-color: rgb(240, 240, 240);
+  padding-top: 3px;
+  padding-bottom: 4px;
+}
+
+/*FOOTER - ALL PAGES*/
+footer {
+  width: 100%;
+  background-color: rgb(222, 222, 222);
+  border: 3px solid rgb(169, 169, 169);
+  border-radius: 5px 5px 0px 0px;
+  padding-left: 1vw;
+}
+
+/*LANDING PAGE CONTENT*/
+/*Gallery*/
+.wrapper {
+  display: grid;
+  grid-template-columns: 2fr 10fr 2fr;
+  grid-gap: 20px;
+  overflow: hidden;
+  height: 72.5vh; 
+  margin: 1vw;
+}
+  
+.gallery {
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+  
+.gallery__img {
+  display: block;
+  max-width: 100%;
+  scroll-snap-align: center;
+  margin-bottom: 10px;
+  min-height: 70vh;
+  object-fit: cover;
+}
+
+.lil-nav {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.lil-nav a {
+  height: 25vh;
+  display: flex;
+  margin-bottom: 10px;
+}
+  
+.lil-nav__img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+  filter: saturate(0);
+  transition: 0.3s ease all;
+}
+  
+.lil-nav__img:hover {
+  transform: scale(1.05);
+  filter: saturate(1);
+}
+
+aside {
+  background: rgb(222, 222, 222);
+  border: 2px solid rgb(169, 169, 169);
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.Description {
+  background: rgb(222, 222, 222);
+  border: 2px solid rgb(169, 169, 169);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 3px;  
+}
+
+/*FILM PAGE CONTENT*/
+video{
+  border: 2px solid rgb(169, 169, 169);
+}
+
+object {
+  border: 2px solid rgb(169, 169, 169);  
+}
+
+.Highlights {
+  display: grid;
+  grid-template-columns: 7fr 2fr;
+  background: rgb(222, 222, 222);
+  border: 2px solid rgb(169, 169, 169);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.Highlights object {
+  grid-column: 1;
+  width: 75vw;
+  height: calc(75vw * 9 / 16);
+}
+
+.FilmExperience {
+  grid-column: 2;
+}
+
+.VideoTiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr; 
+  padding-top: 10px;
+}
+
+.FPV {
+  grid-column: 1;
+  grid-row: 1;
+  width: 31.5vw;
+  height: calc(31.5vw * 9 / 16);
+}
+
+.VideoColumn1 {
+  background: rgb(222, 222, 222);
+  border: 2px solid rgb(169, 169, 169);
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.Walkaround {
+  grid-column: 2;
+  grid-row: 1;
+  width: 31.5vw;
+  height: calc(31.5vw * 9 / 16);
+}
+
+.VideoColumn2 {
+  background: rgb(222, 222, 222);
+  border: 2px solid rgb(169, 169, 169);
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.Bose {
+  grid-column: 3;
+  grid-row: 1;
+  width: 31.5vw;
+}
+
+.VideoColumn3 {
+  background: rgb(222, 222, 222);
+  border: 2px solid rgb(169, 169, 169);
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 5px;
+}
+
+.AdditionalVideos {
+  background: rgb(222, 222, 222);
+  border: 2px solid rgb(169, 169, 169);
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.AdditionalVideos object {
+  width: 48vw;
+  height: 45vh;
+}
+
+
+/*PHOTO PAGE CONTENT*/
+.Experience {
+  background: rgb(222, 222, 222);
+  border: 2px solid rgb(169, 169, 169);
+  border-radius: 5px;
+  padding: 3px;
+}
+
+/*PROGRAMMING PAGE CONTENT*/
+.Experience.Program {
+  margin: 5px;
+  width: 98.5vw;
+}
+
+.Programs {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  width: 98.5vw;
+  background: rgb(222, 222, 222);
+  border: 2px solid rgb(169, 169, 169);
+  border-radius: 5px;
+  padding: 3px;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Programs img {
+  height: 45vh;
+  padding-right: 15px;
+}
+
+/*MISC PAGE CONTENT*/
+.Misc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 11fr;
+}
+
+.Misc h2 {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  text-align: left;
+}
+
+.Misc p {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.Misc img {
+  grid-column: 2;
+  grid-row: 2;
+  width: 75vw;
+}
+
+.Miscellaneous img{
+  border: 2px solid rgb(169, 169, 169);
+}
+
+.Projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 98.5vw;
+  background: rgb(222, 222, 222);
+  border: 2px solid rgb(169, 169, 169);
+  border-radius: 5px;
+  padding: 3px;
+  margin: 5px;
+}
+
+.Projects img {
+  width: 31.5vw;
+  margin: 5px;
+}
+
+.Blender {
+  width: 31.5vw;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.Redraw {
+  width: 31.5vw;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+
+.Drawing {
+  width: 31.5vw;
+  grid-column: 3;
+  grid-row: 1;
+}
+
+/*RESPONSIVE LAYOUT ADJUSTMENTS*/
+@media screen and (max-width: 600px){
+  .wrapper {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 3fr;
+    height: 80vh;
+  }
+
+  .gallery{
+    min-height: 40vh;
+    grid-row: 1;
+    grid-column: 1/-1;
+  }
+
+  .gallery__img {
+    min-height: 40vh;
+  }
+
+  .lil-nav{
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .lil-nav a {
+    height: 10vh;
+  }
+
+  #wrapper > aside{
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  header {
+    width: 101vw;
+  }
+
+  nav:not(.lil-nav){
+    font-size: 3vw;
+    width: 100vw;
+  }
+
+  .Highlights {
+    width: 99vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+  }
+  
+  .Highlights object {
+    grid-column: 1;
+    grid-row: 1;
+    width: 95vw;
+  }
+  
+  .FilmExperience {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .VideoTiles {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding-top: 3px;
+    padding-left: 3px;
+  }
+
+  .FPV {
+    grid-column: 1;
+    grid-row: 1;
+    width: 95vw;
+    height: calc(95vw * 9 / 16);
+  }
+
+  .VideoColumn1 {
+    background: rgb(222, 222, 222);
+    border: 2px solid rgb(169, 169, 169);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .Walkaround {
+    grid-column: 1;
+    grid-row: 2;
+    width: 95vw;
+    height: calc(95vw * 9 / 16);
+  }
+  
+  .VideoColumn2 {
+    background: rgb(222, 222, 222);
+    border: 2px solid rgb(169, 169, 169);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .Bose {
+    grid-column: 1;
+    grid-row: 3;
+    width: 95vw;
+  }
+  
+  .VideoColumn3 {
+    background: rgb(222, 222, 222);
+    border: 2px solid rgb(169, 169, 169);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .AdditionalVideos {
+    margin-top: 5px;
+    margin-left: 8px;
+    margin-bottom: 5px;
+  }
+
+  .AdditionalVideos object {
+    width: 95vw;
+    height: 25vh;
+  }
+
+  .PhotoExperience {
+    overflow-x: scroll;
+  }
+
+  .Programs {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5fr 3fr;
+    width: 98.5vw;
+    margin: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .Programs.Two {
+    grid-template-rows: 4fr 3fr;
+  }
+  
+  .Programs img {
+    width: 98.5vw;
+    height:max-content;
+    padding-right: 15px;
+  }
+
+  .AllPrograms p {
+    margin: 5px;
+    width: 97.5vw;
+  }
+
+  footer {
+    font-size: 3vw;
+  }
+
+  .Misc {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2.5fr;
+    width: 100vw;
+  }
+
+  .Misc img {
+    width: 50vw;
+  }
+
+  .Projects {
+    width: 98.5vw;
+    display: grid;
+    grid-template-rows: 0.5fr 0.75fr 0.7fr;
+  }
+  
+  .Projects img {
+    width: 96vw;
+  }
+
+  .Projects p {
+    padding: 5px;
+  }
+  
+  .Blender {
+    width: 96vw;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .Redraw {
+    width: 96vw;
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  
+  .Drawing {
+    width: 96vw;
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
