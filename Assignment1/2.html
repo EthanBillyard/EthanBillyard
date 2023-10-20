@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- include jQuery plugins -->
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+        <script>
+            //JavaScript Demo
+                function changeText(){
+                    var userText = document.getElementById('userText').value;
+
+                    document.getElementById('userOutput').innerHTML = userText;
+                }
+
+                function checkRange(){
+                    var userRange = document.getElementById('numberRange').value;
+
+                    if (userRange >= 1 && userRange <= 10)
+                        {
+                            alert("Number is in range")
+                        }
+                    else {
+                        alert("Number is not within range")
+                    }
+                }
+
+                function hide(){
+                    document.getElementById('visibility').style.visibility = "hidden";
+                }
+
+                function show(){
+                    document.getElementById('visibility').style.visibility = "visible";
+                }
+        </script>
+        <!-- ui and widgets -->
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+
+    <body id="form">
+        <h2>Demonstrating the JavaScript HTML DOM</h2>
+        <center>
+            <form action=" " name="demo">
+                <p id="userTextLabel">Enter Text</p>
+                <input type="userText" name="userText" id="userText" />
+                <button type="button" onClick="changeText();" id="userOutput">Click Me!</button>
+
+            </br>
+
+                <p>Please input a number between 1 and 10:</p>
+                <input type="numberRange" name="numberRange" id="numberRange" />
+                <button type="button" onClick="checkRange();">Click to check the range</button>
+
+            </br>
+
+                <p>Hover the mouse over</p>
+                <h2 onmouseover="this.innerHTML='Thank you!'" onmouseout="this.innerHTML='Mouse Over Me!'">Mouse Over Me!</h2>
+
+            </br>
+
+                <p>Change the visibility of the text below</p>
+                <p id="visibility">This is the text</p>
+                <button type="button" onClick="hide();">Hide Text</button>
+                <button type="button" onClick="show();">Show Text</button>
+            </form>
+        </center>
+
+    </body>
+</html>

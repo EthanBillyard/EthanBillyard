@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- include jQuery plugins -->
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+        <script>
+            function add(){
+                var value1 = document.getElementById('value1').value;
+                var value2 = document.getElementById('value2').value;
+
+                var result = parseFloat(value1) + parseFloat(value2)
+                document.getElementById('result').value = result
+            }
+            function subtract(){
+                var value1 = document.getElementById('value1').value;
+                var value2 = document.getElementById('value2').value;
+
+                var result = parseFloat(value1) - parseFloat(value2)
+                document.getElementById('result').value = result
+            }
+            function multiply(){
+                var value1 = document.getElementById('value1').value;
+                var value2 = document.getElementById('value2').value;
+
+                var result = parseFloat(value1) * parseFloat(value2)
+                document.getElementById('result').value = result
+            }
+            function divide(){
+                var value1 = document.getElementById('value1').value;
+                var value2 = document.getElementById('value2').value;
+
+                var result = parseFloat(value1) / parseFloat(value2)
+                document.getElementById('result').value = result
+            }
+        </script>
+        <!-- ui and widgets -->
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+
+    <body id="form">
+        <h2>Simple Calculator</h2>
+        <form action=" " name="calculator">
+
+            <label for="value1">Value 1</label>
+            <input type="text" name="value1" id="value1" />
+
+            <label for="value2">Value 2</label>
+            <input type="text" name="value2" id="value2" />
+
+            <button type="button" onClick="add();">Add</button>
+            <button type="button" onClick="subtract();">Subtract</button>
+            <button type="button" onClick="multiply()">Mulitply</button>
+            <button type="button" onClick="divide();">Divide</button>
+
+            <label for="result">Result:</label>
+            <input type="text" name="result" id="result"/>
+        </form>
+    </body>
+</html>

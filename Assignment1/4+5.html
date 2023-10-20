@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- include jQuery plugins -->
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/additional-methods.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <script src="4+5.js"></script>
+        <!-- ui and widgets -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
+    </head>
+
+    <body id="registration-form">
+        <center><h2>Registration</h2></center>
+        <form action=" " name="registration">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Ethan@Billyard.com"/>
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="#$123;#$123"/>
+
+            <label for="firstname">First Name</label>
+            <input type="text" name="firstname" id="firstname" placeholder="Ethan"/>
+
+            <label for="lastname">Last Name</label>
+            <input type="text" name="lastname" id="lastname" placeholder="Billyard"/>
+
+            <label for="zipcode">Zip Code</label>
+            <input type="text" name="zipcode" id="zipcode" placeholder="A1B-2C3"/>
+
+            <label for="phonenumber">Phone Number</label>
+            <input type="text" name="phonenumber" id="phonenumber" placeholder="123-456-7890"/>
+
+            <button type="submit">Submit</button>
+
+            <center>
+                <h2>Lightbox Below - click to see</h2>
+                <a href="https://ethanbillyard.github.io/EthanBillyard/Images/LandingFiles/CT5.JPG" data-lightbox="gallery" data-title="A picture by me">
+                    <img src="https://ethanbillyard.github.io/EthanBillyard/Images/LandingFiles/CT5.JPG">
+                </a>
+
+                <a hidden href="https://ethanbillyard.github.io/EthanBillyard/Images/LandingFiles/VintageCar.JPG" data-lightbox="gallery" data-title="A picture by me">
+                    <img src="https://ethanbillyard.github.io/EthanBillyard/Images/LandingFiles/VintageCar.JPG">
+                </a>
+
+                <h2>bxSlider Below - cycle through images</h2>
+                <div class="bxslider">
+                    <div><img src="https://ethanbillyard.github.io/EthanBillyard/Images/LandingFiles/VintageCar.JPG"></div>
+                    <div><img src="https://ethanbillyard.github.io/EthanBillyard/Images/LandingFiles/CT5.JPG"></div>
+                </div>
+            </center>
+        </form>
+    </body>
+</html>

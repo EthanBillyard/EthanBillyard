@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- include jQuery plugins -->
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                //Validate input
+                $('form[name="converter"]').validate({
+                    rules:{
+                        weightPounds:{
+                            required: true,
+                            number: true,
+                        },
+                    },
+                    messages:{
+                        weightPounds:"Please enter a valid number"
+                    },
+                    //Calulate weight
+                    submitHandler: function calculate(){
+                        var weight = document.getElementById('weightPounds').value;
+
+                        var weightConverted = parseFloat(weight) * 0.45359237;
+                        document.getElementById('weightKG').value = weightConverted;
+                    }
+                })
+            })
+        </script>
+        <!-- ui and widgets -->
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+
+    <body id="form">
+        <h2>Weight Converter (pound to kg)</h2>
+        <form action=" " name="converter">
+            <p>Enter weight value in pounds:</p>
+            <label for="weightPounds">Pounds</label>
+            <input type="text" name="weightPounds" id="weightPounds" />
+
+            <button type="submit" onClick="calculate();">Submit</button>
+
+            <label for="weightKG">Kilograms: </label>
+            <input type="text" name="weightKG" id="weightKG"/>
+        </form>
+    </body>
+</html>
